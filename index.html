@@ -31,7 +31,7 @@
                             </div>
                         </div>
                         <div class="col col-lg-6 mt-10">
-                            <div class="button button__message btnNo" onclick="showMess()">
+                            <div id="content" class="button button__message btnNo" onclick="showMessDelay()">
                                 <span>  </span>
                             </div>
                         </div>
@@ -58,6 +58,15 @@
             {
                 document.getElementById("card1").style.display = 'none';
                 document.getElementById("card2").style.display = "inline";
+            }
+            function showMessDelay()
+            {
+                document.getElementById("content").innerHTML = "<span> Có </span>";
+                document.getElementById("content").classList.remove("button__message");
+                setTimeout(function() {
+                    document.getElementById("card1").style.display = 'none';
+                    document.getElementById("card2").style.display = "inline";
+                }, 1000);
             }
         </script>
     </body>
